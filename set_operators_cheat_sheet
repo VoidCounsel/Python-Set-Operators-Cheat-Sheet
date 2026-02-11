@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Set Operators Cheat Sheet</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: white;
+    }
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #3498db;
+      color: white;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background: #f8f8f8;
+    }
+    tr:hover {
+      background: #e8f4ff;
+    }
+    .mnemonic {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+    .quick {
+      margin: 40px auto;
+      max-width: 1000px;
+      text-align: center;
+      font-size: 1.1em;
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    @media print {
+      body {
+        margin: 1cm;
+        background: white;
+      }
+      table {
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      .quick {
+        border: 1px solid #ccc;
+        background: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Python Set Operators Cheat Sheet</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Operator</th>
+        <th>Symbol</th>
+        <th>Heuristic / Mnemonic</th>
+        <th>Plain English</th>
+        <th>Example Result<br>(A={1,2,3,4}, B={3,4,5,6})</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Union</td>
+        <td>|</td>
+        <td class="mnemonic">me <strong>plus</strong> you</td>
+        <td>Everyone in at least one set</td>
+        <td>{1,2,3,4,5,6}</td>
+      </tr>
+      <tr>
+        <td>Intersection</td>
+        <td>&</td>
+        <td class="mnemonic">both me <strong>and</strong> you</td>
+        <td>Only items in both sets</td>
+        <td>{3,4}</td>
+      </tr>
+      <tr>
+        <td>Difference</td>
+        <td>-</td>
+        <td class="mnemonic">in me <strong>but not</strong> in you</td>
+        <td>Items only in left set</td>
+        <td>{1,2}</td>
+      </tr>
+      <tr>
+        <td>Symmetric Difference</td>
+        <td>^</td>
+        <td class="mnemonic">in me <strong>XOR</strong> in you<br>(exclusive friends)</td>
+        <td>Items in exactly one set</td>
+        <td>{1,2,5,6}</td>
+      </tr>
+      <tr>
+        <td>Subset</td>
+        <td>&lt;=</td>
+        <td class="mnemonic">I'm completely <strong>inside</strong> you</td>
+        <td>Left ≤ Right</td>
+        <td>False</td>
+      </tr>
+      <tr>
+        <td>Proper subset</td>
+        <td>&lt;</td>
+        <td class="mnemonic">I'm <strong>strictly inside</strong> you</td>
+        <td>Left < Right</td>
+        <td>False</td>
+      </tr>
+      <tr>
+        <td>Superset</td>
+        <td>&gt;=</td>
+        <td class="mnemonic">I <strong>contain</strong> you completely</td>
+        <td>Left ≥ Right</td>
+        <td>False</td>
+      </tr>
+      <tr>
+        <td>Proper superset</td>
+        <td>&gt;</td>
+        <td class="mnemonic">I <strong>strictly contain</strong> you</td>
+        <td>Left > Right</td>
+        <td>False</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="quick">
+    Quick reminders:  
+    <strong>A | B</strong> → me plus you  •  
+    <strong>A & B</strong> → both  •  
+    <strong>A - B</strong> → me but not you  •  
+    <strong>A ^ B</strong> → exclusive / surprise guests
+  </div>
+
+</body>
+</html>
